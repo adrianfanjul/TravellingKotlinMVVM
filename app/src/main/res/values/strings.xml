@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">Travelling Kotlin MVVM</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="onboarding_text_btn">Ir a Login</string>
+    <string name="onboarding_text_btn">Ir al Login</string>
     <string name="login_username_text">Usuario o email</string>
     <string name="login_password_text">Contraseña</string>
     <string name="login_login_btn_text">Login</string>
+    <string name="onboarding_one_title">Tu App de Viajes</string>
+    <string name="onboarding_one_text">Hola, estamos buscando a millones de usuarios con inquietudes y ganas de viajar.Si eres tu? No lo dudes accede a nuestra app y descubriras miles de destinos y facilidades para alquilar coches,ver el tiempo ...</string>
+    <string name="onboarding_two_title">Find Your Match!</string>
+    <string name="onboarding_two_text">We\'ve helped millions across the nation find their perfect match.. and you\'re next!</string>
+    <string name="onboarding_three_title">Find the Perfect \nRoommate</string>
+    <string name="onboarding_three_text">We\'ve helped millions across the nation find their perfect match.. and you\'re next!</string>
 </resources>

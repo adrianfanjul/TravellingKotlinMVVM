@@ -1,38 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
+
     <data>
+
         <variable
             name="listener"
             type="com.tokioschool.travellingkotlinmvvm.presentation.features.onboarding.fragments.EventClickListenersOnboarding" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/onboarding2BackgroundColor">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/onboarding_title_text"
-            android:layout_width="wrap_content"
+            android:id="@+id/onboarding_two_title"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Fragment2"
+            android:layout_margin="@dimen/onboarding_items_margin"
+            android:text="@string/onboarding_two_title"
+            android:textAppearance="?travellingH5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/onboarding_one_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/onboarding_items_margin"
+            android:text="@string/onboarding_two_text"
+            android:textAppearance="?travellingBody16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onboarding_two_title" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/onboarding_two_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onboarding_one_text"
+            app:srcCompat="@drawable/photo_onboarding_two" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/onboarding_two_login_btn"
             style="?travellingButton_filled_round"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginVertical="15dp"
-            android:text="@string/onboarding_text_btn"
+            android:layout_marginHorizontal="@dimen/filled_button_horizontal_margin"
+            android:layout_marginVertical="@dimen/filled_button_vertical_margin"
             android:onClick="@{(view)-> listener.navigateLogin()}"
+            android:text="@string/onboarding_text_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/onboarding_title_text" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

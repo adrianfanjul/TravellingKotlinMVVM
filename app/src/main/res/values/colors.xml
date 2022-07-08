@@ -11,4 +11,7 @@
     <color name="secondaryTextColor">#4e342e</color>
     <color name="white">@android:color/white</color>
     <color name="disableFilledBtn">#CE93D8</color>
+    <color name="onboarding1BackgroundColor">#5E5D5D</color>
+    <color name="onboarding2BackgroundColor">#F48FB1</color>
+    <color name="onboarding3BackgroundColor">#B39DDB</color>
 </resources>
