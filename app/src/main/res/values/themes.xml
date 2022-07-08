@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TravellingKotlinMVVM" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/secondaryTextColor</item>
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
+        <!-- Secondary brand color. -->
+        <item name="colorOnSurface">@color/secondaryDarkColor</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="colorOnSecondary">@color/secondaryDarkColor</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <!-- Customize your theme here. -->
+        <item name="travellingH1">@style/TextAppearance.Travelling.Headline1</item>
+        <item name="travellingH2">@style/TextAppearance.Travelling.Headline2</item>
+        <item name="travellingH3">@style/TextAppearance.Travelling.Headline3</item>
+        <item name="travellingH4">@style/TextAppearance.Travelling.Headline4</item>
+        <item name="travellingH5">@style/TextAppearance.Travelling.Headline5</item>
+        <item name="travellingH6">@style/TextAppearance.Travelling.Headline6</item>
+        <item name="travellingBody16">@style/TextAppearance.Travelling.Body1</item>
+        <item name="travellingBody14">@style/TextAppearance.Travelling.Body2</item>
+        <item name="travellingBody16Inverse">@style/TextAppearance.Travelling.Body1.Inverse</item>
+        <item name="travellingBody14Inverse">@style/TextAppearance.Travelling.Body2.Inverse</item>
+        <item name="travellingButton_filled">@style/Button.Filled</item>
+        <item name="travellingButton_filled_round">@style/Button.Filled.Rounded</item>
+        <item name="travellingButton_filled_cut">@style/Button.Filled.Cut</item>
+        <item name="travellingButton_outline">@style/Button.Outlined</item>
+    </style>
+
+    <style name="Theme.TravellingKotlinMVVM.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.TravellingKotlinMVVM.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.TravellingKotlinMVVM.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

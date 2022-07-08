@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#01a9f4</color>
+    <color name="primaryLightColor">#67daff</color>
+    <color name="primaryDarkColor">#007ac1</color>
+    <color name="secondaryColor">#4caf50</color>
+    <color name="secondaryLightColor">#80e27e</color>
+    <color name="secondaryDarkColor">#087f23</color>
+    <color name="colorPrimaryVariant">#007ac1</color>
+    <color name="primaryTextColor">#fafafa</color>
+    <color name="secondaryTextColor">#4e342e</color>
+    <color name="white">@android:color/white</color>
+    <color name="disableFilledBtn">#CE93D8</color>
+</resources>
