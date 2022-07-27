@@ -1,8 +1,9 @@
-package com.tokioschool.travellingkotlinmvvm.presentation
+package com.tokioschool.travellingkotlinmvvm.presentation.features.home.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.navArgs
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.tokioschool.travellingkotlinmvvm.databinding.ActivityMainBinding
@@ -13,7 +14,6 @@ import viewBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private val binding by viewBinding(ActivityMainBinding::inflate)
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -6,17 +6,41 @@
     app:startDestination="@id/onboardingContainerFragment">
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.tokioschool.travellingkotlinmvvm.presentation.features.login.fragments.LoginFragment"
-        tools:layout="@layout/fragment_login"/>
-
-    <fragment
         android:id="@+id/onboardingContainerFragment"
         android:name="com.tokioschool.travellingkotlinmvvm.presentation.features.onboarding.fragments.OnboardingContainerFragment"
         tools:layout="@layout/fragment_onboarding_container">
         <action
             android:id="@+id/to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment">
+        </action>
     </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.tokioschool.travellingkotlinmvvm.presentation.features.login.fragments.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/loginFragment_to_mainActivity"
+            app:destination="@id/mainActivity" >
+            <argument
+                android:name="user"
+                app:argType="com.tokioschool.travellingkotlinmvvm.domain.models.User"
+                app:nullable="true" />
+        </action>
+    </fragment>
+
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.tokioschool.travellingkotlinmvvm.presentation.features.home.activity.MainActivity"
+        android:label="MainActivity" >
+
+        <argument
+            android:name="user"
+            app:argType="com.tokioschool.travellingkotlinmvvm.domain.models.User"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </activity>
+
 
 </navigation>

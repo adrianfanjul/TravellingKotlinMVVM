@@ -1,6 +1,13 @@
 package com.tokioschool.travellingkotlinmvvm.core.di.data
 
+import android.util.Log
+import android.widget.Toast
 import androidx.viewbinding.BuildConfig
+import com.facebook.AccessToken
+import com.google.firebase.auth.FacebookAuthProvider
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -65,4 +72,5 @@ object NetworkModule {
     fun provideHttpLoginInterceptor(): HttpLoggingInterceptor {
         return HttpLoggingInterceptor()
     }
+
 }
