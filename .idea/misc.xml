@@ -7,12 +7,15 @@
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/TravellingKotlinMVVM/app/src/main/res/layout/activity_login.xml" value="0.1947463768115942" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/TravellingKotlinMVVM/app/src/main/res/layout/activity_main.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/TravellingKotlinMVVM/app/src/main/res/layout/fragment_home.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/TravellingKotlinMVVM/app/src/main/res/layout/fragment_hotel_maps.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/TravellingKotlinMVVM/app/src/main/res/layout/fragment_login.xml" value="0.21" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/TravellingKotlinMVVM/app/src/main/res/layout/fragment_onbarding_step_one.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/TravellingKotlinMVVM/app/src/main/res/layout/fragment_onboarding_container.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/TravellingKotlinMVVM/app/src/main/res/layout/fragment_onboarding_step_one.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/TravellingKotlinMVVM/app/src/main/res/layout/fragment_onboarding_step_three.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/TravellingKotlinMVVM/app/src/main/res/layout/fragment_onboarding_step_two.xml" value="0.365625" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/TravellingKotlinMVVM/app/src/main/res/layout/item_hotel_list.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/TravellingKotlinMVVM/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.35260416666666666" />
       </map>
     </option>
   </component>

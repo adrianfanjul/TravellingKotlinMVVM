@@ -30,10 +30,6 @@ class LoginRepositoryImpl @Inject constructor(
         kotlin.run {
             val credential= FacebookAuthProvider.getCredential(token.token)
             auth.signInWithCredential(credential).await()?.let { authResult ->
-                Log.e("adri","DISPLAYNAME ${authResult.user?.displayName?:"nulo"}")
-                Log.e("adri","PHONE-NUMBER ${authResult.user?.phoneNumber?:"nulo"}")
-                Log.e("adri","FOTO ${authResult.user?.photoUrl?:"nulo"}")
-                Log.e("adri","ADITIONAL-USER-INFO ${authResult.additionalUserInfo?.profile}")
                 emit(User(
                     name= (authResult.additionalUserInfo?.profile?.get("first_name")?:"") as String,
                     surName= (authResult.additionalUserInfo?.profile?.get("last_name")?:"") as String,

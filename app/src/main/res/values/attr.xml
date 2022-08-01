@@ -6,6 +6,9 @@
     <attr name="travellingH4" format="reference"/>
     <attr name="travellingH5" format="reference"/>
     <attr name="travellingH6" format="reference"/>
+    <attr name="travellingH4Inverse" format="reference"/>
+    <attr name="travellingH5Inverse" format="reference"/>
+    <attr name="travellingH6Inverse" format="reference"/>
     <attr name="travellingBody14" format="reference"/>
     <attr name="travellingBody16" format="reference"/>
     <attr name="travellingBody14Inverse" format="reference"/>

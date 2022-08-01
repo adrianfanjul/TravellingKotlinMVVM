@@ -85,8 +85,8 @@ abstract class BaseFragmentDb<DB : ViewDataBinding, VM : BaseViewModel> : Fragme
         currentDestination?.getAction(destination)?.let { navigate(destination, bundle) }
     }
 
-
     fun navigateBack() = with(findNavController()) {
         currentDestination?.let { navigateUp() }
     }
+
 }

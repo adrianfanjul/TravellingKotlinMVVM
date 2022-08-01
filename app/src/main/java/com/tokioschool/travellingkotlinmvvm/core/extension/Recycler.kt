@@ -1,4 +1,4 @@
-package com.tokioschol.travellingkotlin.core.extension
+package com.tokioschool.travellingkotlinmvvm.core.extension
 
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView

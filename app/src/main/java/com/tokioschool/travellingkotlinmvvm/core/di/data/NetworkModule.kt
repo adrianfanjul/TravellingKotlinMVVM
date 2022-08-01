@@ -1,13 +1,5 @@
 package com.tokioschool.travellingkotlinmvvm.core.di.data
 
-import android.util.Log
-import android.widget.Toast
-import androidx.viewbinding.BuildConfig
-import com.facebook.AccessToken
-import com.google.firebase.auth.FacebookAuthProvider
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -35,9 +27,9 @@ object NetworkModule {
 
     @Provides
     fun provideBuilderRetrofit(gson: Gson, okHttpClient: OkHttpClient): Retrofit.Builder {
-        return Retrofit.Builder().addConverterFactory(GsonConverterFactory.create(gson))
-            .client(okHttpClient)
+        return Retrofit.Builder().addConverterFactory(GsonConverterFactory.create(gson)).client(okHttpClient)
     }
+
 
     @Provides
     fun provideGson(): Gson {
@@ -46,14 +38,10 @@ object NetworkModule {
         return gsonBuilder.create()
     }
 
+
     @Provides
-    fun provideOkhttpClient(
-        logging: HttpLoggingInterceptor,
-        client: OkHttpClient.Builder
-    ): OkHttpClient {
-        if (BuildConfig.DEBUG) {
-            logging.setLevel(HttpLoggingInterceptor.Level.BASIC)
-        }
+    fun provideOkhttpClient(logging: HttpLoggingInterceptor, client: OkHttpClient.Builder): OkHttpClient {
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY)
         return client
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
@@ -67,10 +55,10 @@ object NetworkModule {
         return OkHttpClient.Builder()
     }
 
+
     @Provides
     @Singleton
     fun provideHttpLoginInterceptor(): HttpLoggingInterceptor {
         return HttpLoggingInterceptor()
     }
-
 }

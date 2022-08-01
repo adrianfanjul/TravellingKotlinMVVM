@@ -1,3 +1,5 @@
+package com.tokioschool.travellingkotlinmvvm.core.extension
+
 import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +11,8 @@ import androidx.viewbinding.ViewBinding
 import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
+//https://gist.github.com/gmk57/aefa53e9736d4d4fb2284596fb62710d
+
 /** Activity binding delegate, may be used since onCreate up to onDestroy (inclusive)
  * private val binding by viewBinding(ActivityMainBinding::inflate)
  * */
@@ -16,6 +20,7 @@ inline fun <T : ViewBinding> AppCompatActivity.viewBinding(crossinline factory: 
     lazy(LazyThreadSafetyMode.NONE) {
         factory(layoutInflater)
     }
+
 
 /** Fragment binding delegate, may be used since onViewCreated up to onDestroyView (inclusive)
  * private val binding by viewBinding(FragmentBinding::bind)

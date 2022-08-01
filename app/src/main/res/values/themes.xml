@@ -22,6 +22,9 @@
         <item name="travellingH4">@style/TextAppearance.Travelling.Headline4</item>
         <item name="travellingH5">@style/TextAppearance.Travelling.Headline5</item>
         <item name="travellingH6">@style/TextAppearance.Travelling.Headline6</item>
+        <item name="travellingH4Inverse">@style/TextAppearance.Travelling.Headline4.Inverse</item>
+        <item name="travellingH5Inverse">@style/TextAppearance.Travelling.Headline5.Inverse</item>
+        <item name="travellingH6Inverse">@style/TextAppearance.Travelling.Headline6.Inverse</item>
         <item name="travellingBody16">@style/TextAppearance.Travelling.Body1</item>
         <item name="travellingBody14">@style/TextAppearance.Travelling.Body2</item>
         <item name="travellingBody16Inverse">@style/TextAppearance.Travelling.Body1.Inverse</item>

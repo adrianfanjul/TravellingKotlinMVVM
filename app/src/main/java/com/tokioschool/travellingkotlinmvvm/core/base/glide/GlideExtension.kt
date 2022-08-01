@@ -1,4 +1,4 @@
-package com.tokioschol.travellingkotlinmvvm.core.base.glide
+package com.tokioschool.travellingkotlinmvvm.core.base.glide
 
 import android.graphics.drawable.Drawable
 import com.bumptech.glide.annotation.GlideExtension

@@ -1,7 +1,9 @@
 package com.tokioschool.travellingkotlinmvvm.core.di.data
 
 
+import com.tokioschool.travellingkotlinmvvm.data.repository.HotelsRepositoryImpl
 import com.tokioschool.travellingkotlinmvvm.data.repository.LoginRepositoryImpl
+import com.tokioschool.travellingkotlinmvvm.domain.repository.HotelsRepository
 import com.tokioschool.travellingkotlinmvvm.domain.repository.LoginRepository
 import dagger.Binds
 import dagger.Module
@@ -13,5 +15,8 @@ import dagger.hilt.components.SingletonComponent
 abstract class RepositoryModules {
     @Binds
     abstract fun bindingLoginRepository(loginRepositoryImpl: LoginRepositoryImpl): LoginRepository
+
+    @Binds
+    abstract fun bindinHotelsRepository(impl: HotelsRepositoryImpl): HotelsRepository
 
 }

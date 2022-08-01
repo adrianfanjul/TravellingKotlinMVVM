@@ -27,6 +27,9 @@
                 app:argType="com.tokioschool.travellingkotlinmvvm.domain.models.User"
                 app:nullable="true" />
         </action>
+        <action
+            android:id="@+id/to_onboardingContainerFragment"
+            app:destination="@id/onboardingContainerFragment" />
     </fragment>
 
 

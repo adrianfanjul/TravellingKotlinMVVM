@@ -3,10 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/hotelList">
 
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/hotelList"
         android:name="com.tokioschool.travellingkotlinmvvm.presentation.features.home.fragments.HomeFragment"
         tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/hotelsMap"
+        android:name="com.tokioschool.travellingkotlinmvvm.presentation.features.home.fragments.HotelMapsFragment"
+        tools:layout="@layout/fragment_hotel_maps"/>
 </navigation>

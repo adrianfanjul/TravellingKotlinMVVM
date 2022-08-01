@@ -1,18 +1,11 @@
 package com.tokioschool.travellingkotlinmvvm.presentation.features.login.fragments
 
-import android.util.Log
-import android.widget.Toast
 import androidx.fragment.app.viewModels
-import com.facebook.AccessToken
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
-import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.auth.FacebookAuthProvider
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 import com.tokioschool.travellingkotlinmvvm.R
 import com.tokioschool.travellingkotlinmvvm.core.base.BaseFragmentDb
 import com.tokioschool.travellingkotlinmvvm.core.extension.snack
@@ -21,17 +14,14 @@ import com.tokioschool.travellingkotlinmvvm.domain.models.SnackbarMessage
 import com.tokioschool.travellingkotlinmvvm.domain.models.User
 import com.tokioschool.travellingkotlinmvvm.presentation.features.login.vm.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class LoginFragment : BaseFragmentDb<FragmentLoginBinding, LoginViewModel>() {
 
     override fun getLayout(): Int = R.layout.fragment_login
     override val viewModel: LoginViewModel by viewModels()
-
     val callbackManager by lazy {CallbackManager.Factory.create()}
     val loginManager by lazy {LoginManager.getInstance()}
-
 
     override fun eventListeners() {
         dataBinding.loginFacebookBtn.setOnClickListener {initLogInFacebook()}
@@ -73,9 +63,8 @@ class LoginFragment : BaseFragmentDb<FragmentLoginBinding, LoginViewModel>() {
     }
 
     private fun loginSucess(user: User?) {
-        //TODO pasar usuario y prevent double click navigation
-        Log.e("adri", "el usuario es ${user?.name}")
-        navigate(R.id.loginFragment_to_mainActivity)
+        val directions = LoginFragmentDirections.loginFragmentToMainActivity(user)
+        navigate(directions)
     }
 
     private fun errorUserName(isValid: Boolean?) {

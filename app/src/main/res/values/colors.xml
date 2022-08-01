@@ -14,4 +14,7 @@
     <color name="onboarding1BackgroundColor">#5E5D5D</color>
     <color name="onboarding2BackgroundColor">#F48FB1</color>
     <color name="onboarding3BackgroundColor">#B39DDB</color>
+    <color name="disableBtn">#CE93D8</color>
+    <color name="rippleColor">#B39DDB</color>
+    <color name="selected_nav">#F36B6B</color>
 </resources>
