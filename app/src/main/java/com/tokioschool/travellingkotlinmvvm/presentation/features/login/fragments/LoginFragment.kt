@@ -41,11 +41,7 @@ class LoginFragment : BaseFragmentDb<FragmentLoginBinding, LoginViewModel>() {
     }
 
     private fun initLogInFacebook() {
-        loginManager.logInWithReadPermissions(
-            this,
-            callbackManager,
-            listOf("email", "public_profile")
-        )
+        loginManager.logInWithReadPermissions(this,callbackManager,listOf("email", "public_profile"))
         loginManager.registerCallback(callbackManager, object :
             FacebookCallback<LoginResult> {
             override fun onSuccess(result: LoginResult) {
@@ -70,8 +66,7 @@ class LoginFragment : BaseFragmentDb<FragmentLoginBinding, LoginViewModel>() {
     private fun errorUserName(isValid: Boolean?) {
         isValid?.let {
             when (isValid) {
-                true -> dataBinding.loginInputLayoutUserName.error =
-                    getString(R.string.login_error_user)
+                true -> dataBinding.loginInputLayoutUserName.error = getString(R.string.login_error_user)
                 false -> dataBinding.loginInputLayoutUserName.error = null
             }
         }

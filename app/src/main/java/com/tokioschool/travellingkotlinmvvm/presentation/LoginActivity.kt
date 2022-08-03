@@ -13,7 +13,6 @@ import com.tokioschool.travellingkotlinmvvm.core.extension.viewBinding
 import com.tokioschool.travellingkotlinmvvm.databinding.ActivityLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
 
-
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
     private lateinit var navController: NavController

@@ -36,14 +36,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
+                android:gravity="center"
                 android:hint="@string/login_username_text"
                 app:endIconMode="clear_text"
                 app:errorEnabled="true"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:gravity="center"
                 app:layout_constraintVertical_bias="0.4">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -52,8 +52,7 @@
                     android:layout_height="match_parent"
                     android:text="@={viewModel.userName}"
                     android:textAppearance="?travellingBody16Inverse"
-                    android:textColor="@color/secondaryTextColor">
-                </com.google.android.material.textfield.TextInputEditText>
+                    android:textColor="@color/secondaryTextColor"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,24 +75,23 @@
                     android:inputType="textPassword"
                     android:text="@={viewModel.password}"
                     android:textAppearance="?travellingBody16Inverse"
-                    android:textColor="@color/secondaryTextColor">
-                </com.google.android.material.textfield.TextInputEditText>
+                    android:textColor="@color/secondaryTextColor"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/login_facebook_btn"
                 style="?travellingButton_filled_round"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="24dp"
+                android:backgroundTint="@color/com_facebook_blue"
+                android:text="@string/login_login_Facebook_btn_text"
                 app:icon="@drawable/com_facebook_button_icon"
                 app:iconGravity="textStart"
                 app:iconPadding="10dp"
-                android:backgroundTint="@color/com_facebook_blue"
-                android:layout_marginHorizontal="50dp"
-                android:layout_marginVertical="24dp"
-                android:text="@string/login_login_Facebook_btn_text"
+                app:layout_constraintBottom_toTopOf="@+id/login_user_btn"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/login_user_btn" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/login_user_btn"
@@ -103,23 +101,24 @@
                 android:enabled="@{viewModel.enableBtn}"
                 android:onClick="@{()-> viewModel.logIn()}"
                 android:text="@string/login_login_btn_text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" />
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/animation_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="@{viewModel.loading?View.VISIBLE:View.GONE}"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_url="@string/login_loading_animation"/>
-
+                app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{viewModel.loading?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_url="@string/login_loading_animation" />
+
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

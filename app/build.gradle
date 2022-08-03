@@ -29,6 +29,7 @@ android {
 
     buildTypes {
         debug{
+            minifyEnabled = false
             resValue "string","facebook_app_id",project.property('facebook_app_id')
             resValue "string","fb_login_protocol_scheme",project.property('fb_login_protocol_scheme')
             resValue "string","facebook_client_token",project.property('facebook_client_token')
@@ -54,11 +55,10 @@ dependencies {
 
     //ktx
     implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.fragment:fragment-ktx:1.5.0'
-    implementation 'androidx.activity:activity-ktx:1.5.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.0'
-
+    implementation 'androidx.fragment:fragment-ktx:1.5.1'
+    implementation 'androidx.activity:activity-ktx:1.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     //android
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
@@ -69,8 +69,14 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-crashlytics-ktx'
     implementation 'com.google.firebase:firebase-auth-ktx'
+    //SDK LOGIN FACEBOOK
     implementation 'com.facebook.android:facebook-login:latest.release'
+
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.1"
+
+    //maps
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
 
     //Cripto
     implementation 'androidx.security:security-crypto-ktx:1.1.0-alpha03'
@@ -93,16 +99,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.13.2'
     kapt 'com.github.bumptech.glide:compiler:4.13.2'
     implementation 'com.github.bumptech.glide:okhttp3-integration:4.13.2'
-
-    //Maps
-    implementation 'com.google.android.gms:play-services-location:20.0.0'
-    implementation 'com.google.android.gms:play-services-maps:18.1.0'
-    // Maps SDK for Android KTX Library
-    implementation 'com.google.maps.android:maps-ktx:3.0.0'
-    // Maps SDK for Android Utility Library KTX Library
-    implementation 'com.google.maps.android:maps-utils-ktx:3.0.0'
-    // Lifecycle Runtime KTX Library
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

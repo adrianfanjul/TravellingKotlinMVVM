@@ -12,7 +12,6 @@ class LoginDatasourceImpl @Inject constructor(
     private val apiLogin:ApiLogin
 ): LoginDatasource {
     override fun logIn(user:String,pass:String): Flow<UserResponse> = flow {
-        delay(5000)
         emit(apiLogin.logInUser(mapOf("usuario" to user,"password" to pass)))
     }
 

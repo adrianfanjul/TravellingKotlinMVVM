@@ -1,6 +1,5 @@
 package com.tokioschool.travellingkotlinmvvm.data.repository
 import android.content.Context
-import android.util.Log
 import com.facebook.AccessToken
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
@@ -8,9 +7,7 @@ import com.tokioschool.travellingkotlinmvvm.data.datasource.LoginDatasource
 import com.tokioschool.travellingkotlinmvvm.data.mappers.mapToUser
 import com.tokioschool.travellingkotlinmvvm.domain.models.User
 import com.tokioschool.travellingkotlinmvvm.domain.repository.LoginRepository
-import dagger.Provides
 import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
@@ -30,11 +27,7 @@ class LoginRepositoryImpl @Inject constructor(
         kotlin.run {
             val credential= FacebookAuthProvider.getCredential(token.token)
             auth.signInWithCredential(credential).await()?.let { authResult ->
-                emit(User(
-                    name= (authResult.additionalUserInfo?.profile?.get("first_name")?:"") as String,
-                    surName= (authResult.additionalUserInfo?.profile?.get("last_name")?:"") as String,
-                    age= -1
-                ))
+                emit(authResult.mapToUser())
             }
         }
     }

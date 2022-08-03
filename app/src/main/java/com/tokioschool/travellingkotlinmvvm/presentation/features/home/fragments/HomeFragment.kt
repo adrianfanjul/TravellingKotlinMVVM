@@ -33,6 +33,7 @@ class HomeFragment : BaseFragmentDb<FragmentHomeBinding, HomeViewModel>() {
     }
     override fun initViewModels() {
         viewModel.loadHotelList()
+
     }
 
     override fun observeViewModels() {
